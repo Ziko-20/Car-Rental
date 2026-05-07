@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext';
 import Button from '../ui/Button';
+import rangeRoverImg from '../../images/RangeRover.jpg';
 
 const floatVariants = {
   animate: {
@@ -136,17 +137,14 @@ export default function HeroSection() {
           <div className="relative mx-auto max-w-md">
             {/* Main card */}
             <div className="glass rounded-3xl p-6 border border-white/10 shadow-premium-dark">
-              {/* Car illustration placeholder */}
-              <div className="h-56 rounded-2xl bg-gradient-to-br from-dark-700 to-dark-600 flex items-center justify-center mb-4 overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-gold-500/20 to-transparent" />
-                <svg className="w-40 h-28 text-gold-500/60" viewBox="0 0 200 120" fill="currentColor">
-                  <path d="M 20 80 L 30 50 Q 35 40 50 38 L 80 35 L 100 25 L 140 25 L 160 38 L 175 42 L 180 50 L 185 80 Z" />
-                  <circle cx="55" cy="85" r="18" fill="#1a1a1a" stroke="currentColor" strokeWidth="3" />
-                  <circle cx="55" cy="85" r="8" fill="currentColor" opacity="0.6" />
-                  <circle cx="145" cy="85" r="18" fill="#1a1a1a" stroke="currentColor" strokeWidth="3" />
-                  <circle cx="145" cy="85" r="8" fill="currentColor" opacity="0.6" />
-                  <path d="M 90 38 L 88 55 L 125 55 L 125 38 Z" fill="#1a1a1a" opacity="0.5" />
-                </svg>
+              {/* Car image */}
+              <div className="h-56 rounded-2xl overflow-hidden relative mb-4">
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-900/60 via-transparent to-transparent z-10" />
+                <img
+                  src={rangeRoverImg}
+                  alt="Range Rover Luxe"
+                  className="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-700"
+                />
               </div>
 
               <div className="flex justify-between items-start">
